@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book</title>
+    <link rel="stylesheet" href="/css/travelnow.css" />
+    <link rel="stylesheet" href="/assets/font/LexendZetta-VariableFont_wght.ttf">
+    <link rel="stylesheet" href="/assets/font/Montserrat-VariableFont_wght.ttf">
+    <link rel="stylesheet" href="/assets/font/Poppins-Regular.ttf">
+</head>
+<body>
+    <!-- navbar -->
+     <div class="navbar">
+        <a class="nav-icon" href="/html/home.html"></a>
+        <div id="nav-menu" class="nav-menu">
+          <a class="nav-link" href="/html/home.html">Home</a>
+          <a class="nav-link" href="/html/destination.html">Destination</a>
+          <a class="nav-link" href="/html/contactus.html">Contact</a>
+          <a class="nav-link" href="/html/aboutus.html">About</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <a class="navbar-button-text" href="/html/travelnow.html"><button class="travelnow-btn">Travel Now</button></a>
+     </div>
+
+    <div class="travel">
+        <h1>Travel Now</h1>
+        <div class="container">
+            <form action="" id="registration-form" method="GET">
+                <div class="form">
+                    <label for="">Full Name</label><br>
+                    <input type="text" name="Full name" id="fullname" placeholder="input here"/>
+                </div>
+                <div class="form">
+                    <label for="">Number</label><br>
+                    <input type="number" name="number" id="number" placeholder="input here" required/>
+                </div>
+                
+            </form>
+        </div>
+        <div class="container">
+            <form action="" id="registration-form" method="GET">
+                <div class="form">
+                    <label for="">Total Participant</label><br>
+                    <input type="number" name="totalparticipant" id="totalparticipant" placeholder="input here" required/>
+                </div>
+                <div class="form">
+                    <label for="">Departure Date</label><br>
+                    <input type="date" name="departuredate" id="departuredate" placeholder="input here" required/>
+                </div>
+                <div class="form">
+                    <label for="">Return Date</label><br>
+                    <input type="date" name="returndate" id="returndate" placeholder="input here" required/>
+                </div>
+                <button class="book-btn" type="button" onclick="validateAll()">Book</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- footer -->
+     <div class="footer">
+        <img class="footer-logo" src="/assets/footer-logo.png" alt="">
+        <p>your trusted travel partner, offering <br> seamless and affordable adventures to <br> the best destinations. Let's explore <br> together!</p>
+        <div class="icon">
+            <a target="_blank" href="https://www.instagram.com/binusbekasi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img class="media-icon" src="/assets/instagram.svg" alt=""></a>
+            <a target="_blank" href="https://www.facebook.com/binusbekasi/?locale=id_ID"><img class="media-icon" src="/assets/facebook.svg" alt=""></a>
+            <a target="_blank" href="https://web.whatsapp.com/send/?text=Contact+Us+-+https%3A%2F%2Fbinus.ac.id%2Fbekasi%2Fcontact-us%2F&type=custom_url&app_absent=0"><img class="media-icon" src="/assets/whatsapp.svg" alt=""></a>
+        </div>
+    </div>
+    
+     <script src="/script.js"></script>
+
+</body>
+</html>

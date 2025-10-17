@@ -1,0 +1,269 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "LexendZetta";
+    src: url(/assets/font/LexendZetta-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: "Monserrat";
+    src: url(/assets/font/Montserrat-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: "Poppins";
+    src: url(/assets/font/Poppins-Regular.ttf);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-icon {
+    align-items: center;
+    background: url("/assets/nav-logo.png") no-repeat center center;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    width: 8vw;
+    height: 4vw;
+    transition: 0.2s ease-in-out;
+}
+
+.nav-icon:hover {
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.7))
+    drop-shadow(0 0 10px rgba(0, 0, 0, 0.7))
+    drop-shadow(0 0 15px rgba(180, 179, 179, 0.7));
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-link{
+    margin: 0 2rem;
+    font-family: "Monserrat", sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    position: relative;    
+    letter-spacing: 0.5px;
+    text-decoration: none;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 2px;
+    width: 0;
+    left: 50%;
+    bottom: -10px;
+    transition: 0.3s;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar-button-text{
+    text-decoration: none;
+}
+
+.travelnow-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: royalblue;
+    color: #FAF3E0;
+    border: none;
+    cursor: pointer;
+    width: 10vw;
+    height: 3.5vw;
+    border-radius: 40px;
+    font-size: 18px;
+    transition: 0.2s ease-in-out;
+    text-decoration: none !important;
+    font-family: "Monserrat", sans-serif;
+    position:relative;
+    box-shadow:-2px 2px 2px #ccc;
+    overflow: hidden;
+}
+
+.travelnow-btn::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255,255,255,0.5) 50%, rgba(229, 172, 142, 0));
+    transform: rotateZ(60deg) translate(-5em, 7.5em);
+}
+
+.travelnow-btn:hover::after, button:focus::after {
+  animation: travelnowanim 1s forwards;
+}
+@keyframes travelnowanim {
+  100% {
+    transform: rotateZ(60deg) translate(1em, -9em);
+  }
+}
+
+travenow-btn:active{
+  box-shadow:0px 0px 0px white;
+  -webkit-box-shadow: inset -2px 2px 2px #ccc;
+  -moz-box-shadow:    inset -2px 2px 2px #ccc;
+  box-shadow:         inset -2px 2px 2px #ccc;
+  transform:translate(0, 2px);
+}
+
+button:focus{
+  outline:0;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 4px;
+    width: 25px;
+    background-color: black;
+    margin: 2px 0;
+    transition: 0.2s;
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    background-color: #ECECEC;
+    padding: 3rem 8rem;
+}
+
+.footer-logo{
+    width: 9vw;
+    margin-bottom: 20px;
+}
+
+.footer p{
+    font-family: "Poppins";
+    font-size: 13px;
+    color: grey;
+    margin-bottom: 15px;
+}
+
+.icon{
+    display: flex;
+    gap: 1rem;
+}
+
+.icon img{
+    width: 22px;
+    height: 22px;
+}
+
+.icon img:hover{
+    transition: ease-in 0.2s;
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .travelnow-btn {
+        display: none;
+    }
+
+    .nav-menu .login-btn {
+        display: flex !important;
+        justify-content: center;
+    }
+
+    .nav-link {
+        margin: 1.5rem;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        position: fixed;
+        top: 120px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu.active {
+        display: flex;
+        animation: forwards 0.5s ease forwards;
+    }
+
+    
+    @keyframes dropDown {
+        from {
+        opacity: 0;
+        transform: translateY(-20px);
+        }
+        to {
+        opacity: 1;
+        transform: translateY(0);
+        }
+    }
+
+    .login-btn {
+        width: 25vw;
+        height: 20vw;
+    }
+
+    .nav-icon {
+        width: 20vw;
+        height: 10vw;
+    }
+
+    .footer{
+        padding: 3rem 4rem;
+    }
+
+    .footer-logo{
+        width: 25vw;
+    }
+
+
+    .footer p{
+    font-size: 8px;
+    }
+
+
+}
